@@ -6,12 +6,14 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/goinaction/code/chapter3/words"
+	"../words"
 )
 
 // main is the entry point for the application.
 func main() {
 	filename := os.Args[1]
+
+	fmt.Printf("File to be read \"%s\" \n", filename)
 
 	contents, err := ioutil.ReadFile(filename)
 	if err != nil {
